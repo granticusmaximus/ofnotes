@@ -51,7 +51,7 @@ const BrandHeader = ({ toggleMenu, currentPalette, onTogglePalette, onNavigated 
       </Avatar>
       <div className={classes.titleWrap}>
         <Typography variant="h5" classes={{root: classes.brandFont}}>
-          Of Note<small><em>s</em></small>
+          Grant's Note<small><em>s</em></small>
         </Typography>
         <Typography variant="subtitle2" color="textSecondary" classes={{root: classes.brandFont}}>
           Offline note taking
@@ -59,15 +59,11 @@ const BrandHeader = ({ toggleMenu, currentPalette, onTogglePalette, onNavigated 
       </div>
       <IconButton onClick={onTogglePalette}>
         { currentPalette === 'light'
-            ? <DarkModeIcon />
-            : <LightModeIcon />
+            ? <LightModeIcon />
+            : <DarkModeIcon />
         }
       </IconButton>
-      <Hidden mdDown>
-        <IconButton href="https://github.com/jhackshaw/ofnotes">
-          <GithubIcon />
-        </IconButton>
-      </Hidden>
+      
       <Hidden lgUp>
         <IconButton onClick={toggleMenu}><CloseIcon /></IconButton>
       </Hidden>
