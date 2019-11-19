@@ -83,6 +83,7 @@ const NoteDisplay = props => {
         }
         {...props}
         >
+        
         <Markdown className={classes.content} options={options}>{ note.md }</Markdown> 
         
         <div className={classes.tags}>

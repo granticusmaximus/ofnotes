@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
-import { Avatar,
-         Typography, 
-         IconButton,
-         Hidden} from '@material-ui/core';
+import {
+  Avatar,
+  Typography,
+  IconButton,
+  Hidden
+} from '@material-ui/core';
 import BrandIcon from '@material-ui/icons/NoteAdd';
-import GithubIcon from '@material-ui/icons/GitHub';
 import CloseIcon from '@material-ui/icons/Close';
 import LightModeIcon from '@material-ui/icons/Brightness7';
 import DarkModeIcon from '@material-ui/icons/Brightness5';
@@ -43,27 +44,27 @@ const BrandHeader = ({ toggleMenu, currentPalette, onTogglePalette, onNavigated 
 
   return (
     <div className={classes.root}>
-      <Avatar classes={{root: classes.avatar}}
-              component={Link}
-              to="/"
-              onClick={onNavigated}>
+      <Avatar classes={{ root: classes.avatar }}
+        component={Link}
+        to="/"
+        onClick={onNavigated}>
         <BrandIcon />
       </Avatar>
       <div className={classes.titleWrap}>
-        <Typography variant="h5" classes={{root: classes.brandFont}}>
+        <Typography variant="h5" classes={{ root: classes.brandFont }}>
           Grant's Note<small><em>s</em></small>
         </Typography>
-        <Typography variant="subtitle2" color="textSecondary" classes={{root: classes.brandFont}}>
+        <Typography variant="subtitle2" color="textSecondary" classes={{ root: classes.brandFont }}>
           Offline note taking
         </Typography>
       </div>
       <IconButton onClick={onTogglePalette}>
-        { currentPalette === 'light'
-            ? <LightModeIcon />
-            : <DarkModeIcon />
+        {currentPalette === 'light'
+          ? <LightModeIcon />
+          : <DarkModeIcon />
         }
       </IconButton>
-      
+
       <Hidden lgUp>
         <IconButton onClick={toggleMenu}><CloseIcon /></IconButton>
       </Hidden>

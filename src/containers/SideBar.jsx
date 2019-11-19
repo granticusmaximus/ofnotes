@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { Paper,
          Divider } from '@material-ui/core';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { selectListNotes, 
          selectListError,
@@ -71,6 +70,7 @@ const SideBar = props => {
                    onNavigated={onNavigated} 
                    />
       <div className={classes.filter}>
+      
         <NoteTextField
             name="filter"
             label="Filter"

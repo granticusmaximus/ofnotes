@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectMenuOpen } from '../store/selectors';
 import * as actions from '../store/actions';
-
+import Home from '../partials/Home'
 import ProvideTheme from './ProvideTheme';
 import SideBar from './SideBar';
 import CreateNoteForm from './CreateNoteForm';
@@ -53,6 +53,10 @@ const App = () => {
 
           <Route path="/:slug">
             <NoteDisplay toggleMenu={toggleMenuOpen} />
+          </Route>
+
+          <Route path="/home">
+            <Home toggleMenu={toggleMenuOpen} />
           </Route>
           
         </Switch>
